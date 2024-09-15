@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Recipe Manager</h1>
+            <button id="addRecipeBtn">Add Recipe</button>
+        </header>
+        <div id="recipeLibrary" class="recipe-library">
+            <!-- Recipe items will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Recipe Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <span id="editMenuBtn">≡</span>
+                <div id="editMenu" class="edit-menu">
+                    <button id="editRecipeBtn">Edit Recipe</button>
+                    <button id="deleteRecipeBtn">Delete Recipe</button>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <img id="modalImage" src="" alt="Recipe Image" style="max-width: 50%; max-height: 50%;">
+            <div id="modalText">
+                <hr style="width: 90%;">
+                <p id="modalRecipe"></p>
+                <hr style="width: 90%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Recipe Modal -->
+    <div id="addRecipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Recipe</h2>
+            <input type="text" id="recipeTitleInput" placeholder="Recipe Title">
+            <input type="file" id="recipeImageInput" accept="image/*">
+            <textarea id="recipeTextInput" placeholder="Recipe Instructions"></textarea>
+            <button id="saveRecipeBtn">Save Recipe</button>
+        </div>
+    </div>
+
+    <!-- Edit Recipe Modal -->
+    <div id="editRecipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Recipe</h2>
+            <input type="text" id="editRecipeTitleInput" placeholder="Recipe Title">
+            <input type="file" id="editRecipeImageInput" accept="image/*">
+            <textarea id="editRecipeTextInput" placeholder="Recipe Instructions"></textarea>
+            <button id="saveEditRecipeBtn">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
